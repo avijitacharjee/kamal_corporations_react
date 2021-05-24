@@ -1,0 +1,172 @@
+body {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*=================
+Navbar Start
+===================*/
+.navbar {
+  background-color: #826363;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  opacity: 1000;
+}
+.navbar .main_logo {
+  float: left;
+  height: 42px;
+  align-items: center;
+}
+.navbar ul {
+  float: right;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 42px;
+  padding-right: 20px;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+.navbar ul li {
+  margin-left: 10px;
+}
+.navbar ul li .icon_shade {
+  text-shadow: 1px 1px 1px #000;
+}
+
+#company_name {
+  line-height: 48px;
+  text-align: center;
+  font-size: 28px;
+  color: rgb(26, 23, 23);
+  margin-left: 10px;
+}
+
+/*=================
+Navbar End
+===================*/
+
+/*=================
+Main section Start
+===================*/
+
+.main_section_images {
+  margin-top: 0px;
+  width: 100%;
+}
+
+/*=================
+Main section End
+===================*/
+
+/*=================
+Companies start
+===================*/
+#companies h1 {
+  text-align: center;
+}
+.line {
+  width: 200px;
+  height: 4px;
+  background-color: #826363;
+  margin: auto;
+  border-radius: 10%;
+}
+.line_short {
+    width: 100px;
+    height: 1px;
+    background-color: #826363;
+    margin: auto;
+    border-radius: 20%;
+}
+.ln {
+  text-align: center;
+  background-color: #826363;
+  color: white;
+  border-radius: 100%;
+  padding: 2px;
+}
+.companies_single {
+  display: inline-block;
+  width: 100%;
+  /* background-color: #826363; */
+}
+.trading_images {
+  margin-top: 20px;
+  float: left;
+  padding: 2px;
+  background-color: #826363;
+}
+.trading_texts {
+  margin-top: 20px;
+  float: left;
+  width: 50%;
+  align-items: center;
+}
+.trading_texts .company_logo {
+  display: block;
+  margin: 200px;
+  align-self: center;
+  /* background-color: #826363; */
+}
+.trading_texts .text {
+  width: 300px;
+}
+/*=================
+Companies section End
+===================*/
+
+/*=================
+Partners start
+===================*/
+#partners h1 {
+  text-align: center;
+}
+.parners body {
+  display: block;
+}
+#partners .body .single {
+  float: left;
+  width: 30%;
+  background-image: url('https://media-exp1.licdn.com/dms/image/C511BAQHDmQrN7RC_fw/company-background_10000/0/1553433731336?e=2159024400&v=beta&t=-2KZtDePjrWy5Iave68lKvqGJqUwYffwXQJg-QQD3Dg');
+  background-size: cover;
+  height: 200px;
+  background-color: #826363;
+  margin: 10px;
+}
+/*=================
+Partners section End
+===================*/
+
+/*=================
+Footer start
+===================*/
+#footer {
+    margin-top: 300px;
+    background-color: #826363D0;
+    position: relative;
+    width: 100%;
+}
+
+#footer .contacts {
+    float:left;
+    width: 30%;
+}
+#footer .links {
+    float : right;
+    width: 30%;
+    margin-top: -300px;
+}
+#footer p  {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#footer h2 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/*=================
+Footer End
+===================*/
