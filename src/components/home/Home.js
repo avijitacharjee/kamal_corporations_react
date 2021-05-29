@@ -6,17 +6,7 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faAnchor, faBars } from "@fortawesome/free-solid-svg-icons";
-import { DatePicker, message } from 'antd';
-import { Carousel } from 'antd';
-const contentStyle = {
-  height: '160px',
-  color: '#fff',
-  lineHeight: '160px',
-  textAlign: 'center',
-  background: '#364d79',
-  width: '100%'
-};
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 class Home extends React.Component {
   render() {
     return (
@@ -61,9 +51,6 @@ class Home extends React.Component {
           <div>
             <span id="company_name"> Kamal Corporations </span>
           </div>
-
-          
-          
         </nav>
         <div id="main_section" className="section">
           {/* <img src="images/products/0.jpg" className=""/> */}
