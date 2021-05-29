@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/kamal_corporations_react/static/css/main.52f56a38.chunk.css",
+    "main.js": "/kamal_corporations_react/static/js/main.d795ff87.chunk.js",
+    "main.js.map": "/kamal_corporations_react/static/js/main.d795ff87.chunk.js.map",
+    "runtime-main.js": "/kamal_corporations_react/static/js/runtime-main.206718e3.js",
+    "runtime-main.js.map": "/kamal_corporations_react/static/js/runtime-main.206718e3.js.map",
+    "static/js/2.b4ac32ba.chunk.js": "/kamal_corporations_react/static/js/2.b4ac32ba.chunk.js",
+    "static/js/2.b4ac32ba.chunk.js.map": "/kamal_corporations_react/static/js/2.b4ac32ba.chunk.js.map",
+    "static/js/3.54e50ab3.chunk.js": "/kamal_corporations_react/static/js/3.54e50ab3.chunk.js",
+    "static/js/3.54e50ab3.chunk.js.map": "/kamal_corporations_react/static/js/3.54e50ab3.chunk.js.map",
+    "index.html": "/kamal_corporations_react/index.html",
+    "static/css/main.52f56a38.chunk.css.map": "/kamal_corporations_react/static/css/main.52f56a38.chunk.css.map",
+    "static/js/2.b4ac32ba.chunk.js.LICENSE.txt": "/kamal_corporations_react/static/js/2.b4ac32ba.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/kamal_corporations_react/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.206718e3.js",
+    "static/js/2.b4ac32ba.chunk.js",
+    "static/css/main.52f56a38.chunk.css",
+    "static/js/main.d795ff87.chunk.js"
+  ]
+}
