@@ -14,8 +14,9 @@ class Home extends React.Component {
         <nav className="my_navbar">
           <div className="">
             <img
-            className="main_logo"
-            src="/images/main_logo_circle.png"
+              className="main_logo"
+              src="/images/main_logo_circle.png"
+              alt="main_logo"
             />
             <ul>
             <li>
