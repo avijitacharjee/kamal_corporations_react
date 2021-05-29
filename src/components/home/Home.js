@@ -7,20 +7,27 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faAnchor, faBars } from "@fortawesome/free-solid-svg-icons";
-
+import { DatePicker, message } from 'antd';
+import { Carousel } from 'antd';
+const contentStyle = {
+  height: '160px',
+  color: '#fff',
+  lineHeight: '160px',
+  textAlign: 'center',
+  background: '#364d79',
+  width: '100%'
+};
 class Home extends React.Component {
   render() {
     return (
       <div>
-        <nav className="navbar">
-          <img
+        <nav className="my_navbar">
+          <div className="">
+            <img
             className="main_logo"
             src="/images/main_logo_circle.png"
-            width="42"
-            height="42"
-          />
-          <span id="company_name"> Kamal Corporations </span>
-          <ul>
+            />
+            <ul>
             <li>
               <FontAwesomeIcon
                 icon={faFacebook}
@@ -50,12 +57,16 @@ class Home extends React.Component {
               />
             </li>
           </ul>
+          </div>
+          <div>
+            <span id="company_name"> Kamal Corporations </span>
+          </div>
+
+          
+          
         </nav>
-        <div className="main_section">
-          <img
-            className="main_section_images"
-            src="https://images.unsplash.com/photo-1519735777090-ec97162dc266?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=815&q=80"
-          />
+        <div id="main_section" className="section">
+          {/* <img src="images/products/0.jpg" className=""/> */}
         </div>
         <section id="companies" className="section">
           <div className="container-fluid">
@@ -69,29 +80,31 @@ class Home extends React.Component {
             <div className="line">
               {/* <FontAwesomeIcon icon={ faAnchor } className="ln"/> */}
             </div>
-            <div className="companies_single">
-              <div className="trading_images">
-                  <img className="image" width="600px" src="images/products/1.jpg"/>
+            <div className="c_body">
+                <div className="single">
+                    <img src="images/company_logo/alam_trading_corp.png" alt="" className=""/>
+                </div>
+                <div className="single">
+                  <img src="images/company_logo/agriculture.jpg" alt="" className=""/>
+                </div>
+                <div className="single">
+                    <img src="images/company_logo/logistics.jpg" alt="" className=""/>
               </div>
-              <div className="trading_texts">
-                  <div className="company_logo">
-                    <img className="image" width="300px" src="images/company_logo/alam_trading_corp.png"/>
-                    <p className="text">
-                    Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Aenean placerat volutpat
-                    turpis, a ultricies lectus eleifend non.
-                    Sed ut semper ligula, nec semper tellus.
-                    Quisque tempor velit nec turpis posuere 
-                    malesuada nec viverra ipsum
-                    </p>
-                  </div>
+              <div className="single">
+                  <img src="images/company_logo/nargis_property.jpg" alt="" className=""/>
+              </div>
+              <div className="single">
+                <img src="images/company_logo/infotech.png" alt="" className=""/>
+              </div>
+              <div className="single">
+                  <img src="images/company_logo/joy_bangla_corp.jpg" alt="" className=""/>
               </div>
             </div>
           </div>
         </section>
         
         {/* Partners Section */}
-        <section id="partners" className="section">
+        {/* <section id="partners" className="section">
           <div className="container-fluid">
             <div className="row">
               <div className="section-title">
@@ -101,7 +114,6 @@ class Home extends React.Component {
               </div>
             </div>
             <div className="line">
-              {/* <FontAwesomeIcon icon={ faAnchor } className="ln"/> */}
             </div>
             <div className="body">
                 <div className="single">
@@ -115,54 +127,98 @@ class Home extends React.Component {
                 </div>
             </div>
           </div>
-        </section>
+        </section> */}
         {/* Partner Section End */}
         <section id="footer">
-            <div className="contact">
-                <h2>
-                    Contact
-                </h2>
-                <p>
-                    Fresh Villa
-                </p>
-                <p>
-                    House # 15, Road # 34, Gulshan-1
-                </p>
-                <p>
-                    Dhaka-1212, Bangladesh
-                </p>
-                <p>
-                    Phone : +880-9666777055
-                </p>
-                <p>
-                    Fax : +880 2222289361, 2222284896
-                </p>
-                <p>
-                    Email: info@kamalcorporations.org
-                </p>
-                
-            </div>
-            <div className="links">
-                <h2>
-                    Links
-                </h2>
-                <p>
-                   Giving Back
-                </p>
-                <p>
-                    News & Events
-                </p>
-                <p>
-                    Career
-                </p>
-                <p>
-                    Contact
-                </p>
-                <p>
-                    Site Map
-                </p>
-            </div>
+        <div className="container"></div>
+          <footer>
+            <section className="ft-main">
+              <div className="ft-main-item">
+                <h2 className="ft-title">Registered office</h2>
+                <ul>
+                  <li>
+                    Sabera Bhavan,
+                  </li>
+                  <li>
+                    D C Road,
+                  </li>
+                  <li>
+                    West Bakoliya, 
+                  </li>
+                  <li>
+                    Chawkbazar,
+                  </li>
+                  <li>
+                    Chattogram,Bangladesh.
+                  </li>
+                  {/* <li><a href="#">Services</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">Customers</a></li>
+                  <li><a href="#">Careers</a></li> */}
+                </ul>
+              </div>
+              <div className="ft-main-item">
+                <h2 className="ft-title">Liaison Office</h2>
+                <ul>
+                  <li>House 5/2,</li>
+                  <li>Road 4,Khulshi R/A,</li>
+                  <li>Zakir Hussain Road,</li>
+                  <li>Chattogram,Bangladesh.</li>
+
+                </ul>
+              </div>
+              <div className="ft-main-item">
+                <h2 className="ft-title">Administration Office</h2>
+                <ul>
+                  <li>125,Sugandha Housing Society,</li>
+                  <li>Road -1,Block - D</li>
+                  <li>Chittagong, Bangladesh</li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="ft-social">
+              <ul className="ft-social-list">
+                <li><a href="#"><i className="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i className="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i className="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i className="fab fa-github"></i></a></li>
+                <li><a href="#"><i className="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i className="fab fa-youtube"></i></a></li>
+              </ul>
+            </section>
+
+            <section className="ft-legal">
+              <ul className="ft-legal-list">
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li>&copy; 2021 Copyright Kamal Corporations.</li>
+              </ul>
+            </section>
+          </footer>
         </section>
+        {/* <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <img src="images/products/0.jpg" class="d-block w-100" alt="acbd"/>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="images/products/1.jpg" class="d-block w-100" alt="abcd"/>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="https://images.unsplash.com/photo-1619540169833-4c1e3f06fe0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80" class="d-block w-100" alt="a"/>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div> */}
       </div>
     );
   }
