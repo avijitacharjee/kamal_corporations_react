@@ -7,7 +7,69 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+
+let lastScrollY = 0;
+let ticking = false;
 class Home extends React.Component {
+  state = {
+    logoStyle: {
+      textAlign: "center",
+      height: "50px",
+      width: "50px",
+      margin: "10px",
+      borderRadius: "100%",
+      boxShadow: "0 0 .5em rgba(0, 0, 0, .5)",
+      transition: "width .5s, height .5s"
+    },
+    companyNameStyle: {
+      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      textAlign: "center",
+      lineHeight: "52px",
+      fontSize: "28",
+      width: "260px",
+      fontWeight: 600,
+      color: "rgb(26, 23, 23)",
+      marginLeft: "10px",
+      display: "block",
+      transition : "fontsize .5s,lineHeight .5s",
+    }
+  }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll, true);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+    
+  nav = React.createRef();
+  
+  handleScroll = () => {
+    lastScrollY = window.scrollY;
+    this.setState({
+      logoStyle: {
+        textAlign: "center",
+        height: lastScrollY == 0 ? 50+"px" : 30+"px",
+        width: lastScrollY == 0 ? 50+"px" : 30+"px",
+        margin: lastScrollY == 0 ? 10+"px" : 2+"px",
+        borderRadius: "100%",
+        boxShadow: "0 0 .5em rgba(0, 0, 0, .5)",
+        transition: "width .5s, height .5s"
+      },
+      companyNameStyle: {
+        fontSize: lastScrollY == 0 ? 28+"px" : 18+"px",
+        lineHeight: lastScrollY == 0 ? 52 + "px" : 32 + "px",
+        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+        textAlign: "center",
+        width : "260px",
+        fontWeight: 600,
+        color: "rgb(26, 23, 23)",
+        marginLeft: "10px",
+        display: "block",
+        transition : "fontsize .5s,lineHeight .5s"
+      }
+    })
+  };
   render() {
     return (
       <div>
@@ -15,8 +77,9 @@ class Home extends React.Component {
           <div className="">
             <div className="main_logo">
               <img
-                src="https://kamalcorporations.com/images/main_logo_circle.png"
+                src="images/main_logo_circle.png"
                 alt="main_logo"
+                style = {this.state.logoStyle}
               />
             </div>
             <div>
@@ -52,7 +115,7 @@ class Home extends React.Component {
             </ul>
             </div>
             <div>
-              <span id="company_name"> Kamal Corporations </span>
+              <span style={this.state.companyNameStyle}> Kamal Corporations </span>
             </div>
           </div>
         </nav>
@@ -60,13 +123,19 @@ class Home extends React.Component {
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="5000">
-              <img src="images/products/dal.jpg" class="d-block w-100" alt="acbd"/>
+              <img src="images/products/laptop1.jpg" class="d-block w-100" alt="acbd"/>
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-              <img src="images/products/atta.jpg" class="d-block w-100" alt="abcd"/>
+              <img src="images/products/crafts1.jpg" class="d-block w-100" alt="abcd"/>
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-              <img src="images/products/cake.jpg" class="d-block w-100" alt="a"/>
+              <img src="images/products/cake1.jpg" class="d-block w-100" alt="a"/>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="images/products/rice0.jpg" class="d-block w-100" alt="abcd"/>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="images/products/vehicle1.jpg" class="d-block w-100" alt="a"/>
             </div>
           </div>
           {/* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -84,7 +153,7 @@ class Home extends React.Component {
             <div className="row">
               <div className="section-title">
                 <h1>
-                  <span>Our</span> Products
+                  <span>Our</span> Enterprises
                 </h1>
               </div>
             </div>
@@ -214,3 +283,6 @@ class Home extends React.Component {
   }
 }
 export default Home;
+var styles = {
+
+}

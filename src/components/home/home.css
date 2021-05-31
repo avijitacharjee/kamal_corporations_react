@@ -23,14 +23,6 @@ Navbar Start
   width: 260px;
   text-align: center;
 }
-.my_navbar .main_logo img{
-  text-align: center;
-  height: 50px;
-  width : 50px;
-  margin: 10px;
-  border-radius: 100%;
-  box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
-}
 .my_navbar div ul {
   float: right;
   display: flex;
@@ -224,8 +216,8 @@ Footer start
     margin-right: 20px;
 }
 #footer h2 {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 /* From tutplus */
 /* Generic styling */
