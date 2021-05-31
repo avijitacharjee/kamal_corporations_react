@@ -13,48 +13,71 @@ class Home extends React.Component {
       <div>
         <nav className="my_navbar">
           <div className="">
-            <img
-              className="main_logo"
-              src="/images/main_logo_circle.png"
-              alt="main_logo"
-            />
-            <ul>
-            <li>
-              <FontAwesomeIcon
-                icon={faFacebook}
-                className="fa-2x icon_shade"
-                color="#0000ff"
+            <div className="main_logo">
+              <img
+                src="https://kamalcorporations.com/images/main_logo_circle.png"
+                alt="main_logo"
               />
-            </li>
-            <li>
-              <FontAwesomeIcon
-                icon={faTwitter}
-                className="fa-2x icon_shade"
-                color="#00ACEE"
-              />
-            </li>
-            <li>
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                className="fa-2x icon_shade"
-                color="#0E76A8"
-              />
-            </li>
-            <li>
-              <FontAwesomeIcon
-                icon={faBars}
-                className="fa-2x icon_shade"
-                color="#0E76A8"
-              />
-            </li>
-          </ul>
-          </div>
-          <div>
-            <span id="company_name"> Kamal Corporations </span>
+            </div>
+            <div>
+              <ul>
+              <li>
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  className="fa-2x icon_shade"
+                  color="#0000ff"
+                />
+              </li>
+              <li>
+                <FontAwesomeIcon
+                  icon={faTwitter}
+                  className="fa-2x icon_shade"
+                  color="#00ACEE"
+                />
+              </li>
+              <li>
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  className="fa-2x icon_shade"
+                  color="#0E76A8"
+                />
+              </li>
+              <li>
+                <FontAwesomeIcon
+                  icon={faBars}
+                  className="fa-2x icon_shade"
+                  color="#0E76A8"
+                />
+              </li>
+            </ul>
+            </div>
+            <div>
+              <span id="company_name"> Kamal Corporations </span>
+            </div>
           </div>
         </nav>
         <div id="main_section" className="section">
-          {/* <img src="images/products/0.jpg" className=""/> */}
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <img src="images/products/dal.jpg" class="d-block w-100" alt="acbd"/>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="images/products/atta.jpg" class="d-block w-100" alt="abcd"/>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="images/products/cake.jpg" class="d-block w-100" alt="a"/>
+            </div>
+          </div>
+          {/* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button> */}
+        </div>
         </div>
         <section id="companies" className="section">
           <div className="container-fluid">
@@ -186,27 +209,6 @@ class Home extends React.Component {
             </section>
           </footer>
         </section>
-        {/* <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="5000">
-              <img src="images/products/0.jpg" class="d-block w-100" alt="acbd"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="5000">
-              <img src="images/products/1.jpg" class="d-block w-100" alt="abcd"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="5000">
-              <img src="https://images.unsplash.com/photo-1619540169833-4c1e3f06fe0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80" class="d-block w-100" alt="a"/>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div> */}
       </div>
     );
   }
