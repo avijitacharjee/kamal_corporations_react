@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/kamal_corporations_react/static/css/main.acb5cfea.chunk.css",
-    "main.js": "/kamal_corporations_react/static/js/main.159911b8.chunk.js",
-    "main.js.map": "/kamal_corporations_react/static/js/main.159911b8.chunk.js.map",
+    "main.css": "/kamal_corporations_react/static/css/main.82987fb6.chunk.css",
+    "main.js": "/kamal_corporations_react/static/js/main.ac8d5131.chunk.js",
+    "main.js.map": "/kamal_corporations_react/static/js/main.ac8d5131.chunk.js.map",
     "runtime-main.js": "/kamal_corporations_react/static/js/runtime-main.206718e3.js",
     "runtime-main.js.map": "/kamal_corporations_react/static/js/runtime-main.206718e3.js.map",
     "static/js/2.b4ac32ba.chunk.js": "/kamal_corporations_react/static/js/2.b4ac32ba.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.54e50ab3.chunk.js": "/kamal_corporations_react/static/js/3.54e50ab3.chunk.js",
     "static/js/3.54e50ab3.chunk.js.map": "/kamal_corporations_react/static/js/3.54e50ab3.chunk.js.map",
     "index.html": "/kamal_corporations_react/index.html",
-    "static/css/main.acb5cfea.chunk.css.map": "/kamal_corporations_react/static/css/main.acb5cfea.chunk.css.map",
+    "static/css/main.82987fb6.chunk.css.map": "/kamal_corporations_react/static/css/main.82987fb6.chunk.css.map",
     "static/js/2.b4ac32ba.chunk.js.LICENSE.txt": "/kamal_corporations_react/static/js/2.b4ac32ba.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/kamal_corporations_react/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.206718e3.js",
     "static/js/2.b4ac32ba.chunk.js",
-    "static/css/main.acb5cfea.chunk.css",
-    "static/js/main.159911b8.chunk.js"
+    "static/css/main.82987fb6.chunk.css",
+    "static/js/main.ac8d5131.chunk.js"
   ]
 }
