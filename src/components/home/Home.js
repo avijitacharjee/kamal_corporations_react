@@ -25,14 +25,15 @@ class Home extends React.Component {
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       textAlign: "center",
       lineHeight: "52px",
-      fontSize: "28",
+      fontSize: "28px",
       width: "260px",
       fontWeight: 600,
       color: "rgb(26, 23, 23)",
       marginLeft: "10px",
       display: "block",
       transition : "fontsize .5s,lineHeight .5s",
-    }
+    },
+    floatingNavVisible : true
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll, true);
@@ -70,6 +71,25 @@ class Home extends React.Component {
       }
     })
   };
+  menuOnClick = () => {
+    this.setState({
+      floatingNavVisible: !this.state.floatingNavVisible
+    });
+  }
+  mIn = (event) => {
+    event.target.style.color = 'blue';
+    event.target.style.textDecoration = 'underline'
+  }
+  mOut = (event) => {
+    event.target.style.color = 'white';
+    event.target.style.textDecoration = 'initial'
+  }
+  cIN = (event) => {
+    event.target.style.width = 5;
+  }
+  cOut = (event) => {
+    event.target.style.width = 50;
+  }
   render() {
     return (
       <div>
@@ -105,7 +125,7 @@ class Home extends React.Component {
                   color="#0E76A8"
                 />
               </li>
-              <li>
+              <li onClick={ this.menuOnClick}>
                 <FontAwesomeIcon
                   icon={faBars}
                   className="fa-2x icon_shade"
@@ -119,22 +139,72 @@ class Home extends React.Component {
             </div>
           </div>
         </nav>
+        <div style={{
+          top: 122,
+          right: "80px",
+          position: "fixed",
+          width: "300px",
+          background: "#000000E0",
+          zIndex: 10000,
+          transition : "visibility 0.5s, opacity 0.5s linear",
+          visibility: this.state.floatingNavVisible ? "hidden" : "visible",
+          opacity : this.state.floatingNavVisible ? 0 : 100
+        }} >
+          <ul style={styles.floatingNavUl}>
+            <li style={styles.floatingNavUlLi}
+              onMouseEnter={this.mIn}
+              onMouseLeave={this.mOut}
+            >
+              Home
+            </li>
+            <li style={styles.floatingNavUlLi}
+              onMouseOver={this.mIn}
+              onMouseLeave={this.mOut}
+            >
+              History
+            </li>
+            <li style={styles.floatingNavUlLi}
+            onMouseOver={this.mIn}
+            onMouseLeave={this.mOut}
+          >
+              Products
+            </li>
+            <li style = {styles.floatingNavUlLi}
+              onMouseOver={this.mIn}
+              onMouseLeave={this.mOut}
+            >
+              News & Gallery
+            </li>
+            <li style={styles.floatingNavUlLi}
+              onMouseOver={this.mIn}
+              onMouseLeave={this.mOut}
+            >
+              Partnership
+            </li>
+            <li style={styles.floatingNavUlLi}
+              onMouseOver={this.mIn}
+              onMouseLeave={this.mOut}
+            >
+              Contact
+            </li>
+          </ul>
+        </div>
         <div id="main_section" className="section">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="5000">
-              <img src="images/products/laptop1.jpg" class="d-block w-100" alt="acbd"/>
+            <div class="carousel-item active" data-bs-interval="3000" >
+              <img src="images/products/laptop1.jpg" class="d-block w-100" alt="acbd" />
             </div>
-            <div class="carousel-item" data-bs-interval="5000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img src="images/products/crafts1.jpg" class="d-block w-100" alt="abcd"/>
             </div>
-            <div class="carousel-item" data-bs-interval="5000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img src="images/products/cake1.jpg" class="d-block w-100" alt="a"/>
             </div>
-            <div class="carousel-item" data-bs-interval="5000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img src="images/products/rice0.jpg" class="d-block w-100" alt="abcd"/>
             </div>
-            <div class="carousel-item" data-bs-interval="5000">
+            <div class="carousel-item" data-bs-interval="3000">
               <img src="images/products/vehicle1.jpg" class="d-block w-100" alt="a"/>
             </div>
           </div>
@@ -162,7 +232,7 @@ class Home extends React.Component {
             </div>
             <div className="c_body">
                 <div className="single">
-                    <img src="images/company_logo/alam_trading_corp.png" alt="" className=""/>
+                    <img src="images/company_logo/trading.jpg" alt="" className=""/>
                 </div>
                 <div className="single">
                   <img src="images/company_logo/agriculture.jpg" alt="" className=""/>
@@ -284,5 +354,14 @@ class Home extends React.Component {
 }
 export default Home;
 var styles = {
-
+  
+  floatingNavUl: {
+    marginLeft: "30px",
+    marginTop : "20px",
+    color: "#fff",
+    listStyleType : "circle"
+  },
+  floatingNavUlLi : {
+    color : "#fff"
+  }
 }
