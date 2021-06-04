@@ -100,14 +100,12 @@ Main section End
 /*=================
 Companies start
 ===================*/
-#companies::after {
-  background-color: #000;
-  width: 100%;
-  height: 2px;
-}
 #companies {
   padding-top: 800px;
   margin: auto;
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
 }
 #companies h1 {
   text-align: center;
@@ -201,6 +199,9 @@ Footer start
     margin-right: 1%;
     display: table;
 }
+#footer ul {
+  margin-bottom: 0px;
+}
 
 #footer .contacts {
     float:left;
@@ -234,7 +235,7 @@ ul {
 footer {
   background-color: #826363;
   color: #bbb;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 footer a {
   text-decoration: none;
@@ -265,7 +266,7 @@ body {
 }
 /* Footer main */
 .ft-main {
-  padding: 1.25rem 1.875rem;
+  padding: 0rem 1.875rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -304,13 +305,13 @@ input[type="submit"] {
 }
 /* Footer social */
 .ft-social {
-  padding: 0 1.875rem 1.25rem;
+  padding: 0 0px 0px;
 }
 .ft-social-list {
   display: flex;
   justify-content: center;
   border-top: 1px #777 solid;
-  padding-top: 1.25rem;
+  padding-top: 0px;
 }
 .ft-social-list li {
   margin: 0.5rem;

@@ -249,6 +249,12 @@ class Home extends React.Component {
               <div className="single">
                   <img src="images/company_logo/joy_bangla_corp.jpg" alt="" className=""/>
               </div>
+              {/* <div className="single">
+                  <img src="images/company_logo/joy_bangla_corp.jpg" alt="" className=""/>
+              </div>
+              <div className="single">
+                  <img src="images/company_logo/joy_bangla_corp.jpg" alt="" className=""/>
+              </div> */}
             </div>
           </div>
         </section>
@@ -287,15 +293,10 @@ class Home extends React.Component {
                 <h2 className="ft-title">Registered office</h2>
                 <ul>
                   <li>
-                    Sabera Bhavan,
+                    Sabera Bhavan,D C Road,
                   </li>
                   <li>
-                    D C Road,
-                  </li>
-                  <li>
-                    West Bakoliya, 
-                  </li>
-                  <li>
+                    West Bakoliya,
                     Chawkbazar,
                   </li>
                   <li>
@@ -308,7 +309,7 @@ class Home extends React.Component {
                   <li><a href="#">Careers</a></li> */}
                 </ul>
               </div>
-              <div className="ft-main-item">
+              {/* <div className="ft-main-item">
                 <h2 className="ft-title">Liaison Office</h2>
                 <ul>
                   <li>House 5/2,</li>
@@ -317,7 +318,7 @@ class Home extends React.Component {
                   <li>Chattogram,Bangladesh.</li>
 
                 </ul>
-              </div>
+              </div> */}
               <div className="ft-main-item">
                 <h2 className="ft-title">Administration Office</h2>
                 <ul>
