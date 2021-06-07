@@ -47,6 +47,7 @@ Navbar Start
   color: rgb(26, 23, 23);
   margin-left: 10px;
   display: block;
+  font-family: 'Titillium Web', sans-serif;
 }
 @media screen and (min-width : 490px) {
   .my_navbar {
@@ -147,7 +148,7 @@ Companies start
   float: left;
   width: 31%;
   background-color: #826363;
-  margin: 10px;
+  margin: 1.1%;
   padding: 1px;
   box-shadow: 0 0 .7em rgba(0, 0, 0, .5);
 }
@@ -156,11 +157,28 @@ Companies start
   margin: 0 auto;
   display: block;
 }
+.empty_single {
+  float: left;
+  width: 31%;
+  background-color: #fff;
+  margin: 1.1%;
+  padding: 1px;
+  box-shadow: 0 0 .7em rgba(0, 0, 0, .5);
+}
 @media screen and (max-width : 900px) {
   #companies .c_body .single {
     width: 43%;
+    margin: 3%;
+  }
+  .empty_single {
+    width: 0%;
+    background-color: #fff;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: none;
   }
 }
+
 /*=================
 Companies section End
 ===================*/

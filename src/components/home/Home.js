@@ -196,17 +196,21 @@ class Home extends React.Component {
               <img src="images/products/laptop1.jpg" class="d-block w-100" alt="acbd" />
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-              <img src="images/products/crafts1.jpg" class="d-block w-100" alt="abcd"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src="images/products/cake1.jpg" class="d-block w-100" alt="a"/>
+              <img src="images/products/pen.jpg" class="d-block w-100" alt="abcd"/>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
               <img src="images/products/rice0.jpg" class="d-block w-100" alt="abcd"/>
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-              <img src="images/products/vehicle1.jpg" class="d-block w-100" alt="a"/>
+              <img src="images/products/vehicle.jpg" class="d-block w-100" alt="a"/>
             </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img src="images/products/stationary.jpg" class="d-block w-100" alt="abcd"/>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img src="images/products/cookies.jpg" class="d-block w-100" alt="a"/>
+            </div>
+            
           </div>
           {/* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -251,6 +255,8 @@ class Home extends React.Component {
               </div>
               {/* <div className="single">
                   <img src="images/company_logo/joy_bangla_corp.jpg" alt="" className=""/>
+              </div>
+              <div className="empty_single">
               </div>
               <div className="single">
                   <img src="images/company_logo/joy_bangla_corp.jpg" alt="" className=""/>
