@@ -210,6 +210,15 @@ class Home extends React.Component {
             <div class="carousel-item" data-bs-interval="3000">
               <img src="images/products/cookies.jpg" class="d-block w-100" alt="a"/>
             </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img src="images/products/4.jpg" class="d-block w-100" alt="a"/>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img src="images/products/rice2.png" class="d-block w-100" alt="a"/>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img src="images/products/Dal3.jpg" class="d-block w-100" alt="a"/>
+            </div>
             
           </div>
           {/* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
