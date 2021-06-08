@@ -60,10 +60,10 @@ class Home extends React.Component {
       companyNameStyle: {
         fontSize: lastScrollY == 0 ? 28+"px" : 18+"px",
         lineHeight: lastScrollY == 0 ? 52 + "px" : 32 + "px",
-        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+        fontFamily: "'Titillium Web', sans-serif",
         textAlign: "center",
         width : "260px",
-        fontWeight: 600,
+        fontWeight: 700,
         color: "rgb(26, 23, 23)",
         marginLeft: "10px",
         display: "block",
