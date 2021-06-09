@@ -7,229 +7,60 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Header from "../header/Header";
+import Footer from "../footer/Footer"
 
-let lastScrollY = 0;
-let ticking = false;
 class Home extends React.Component {
-  state = {
-    logoStyle: {
-      textAlign: "center",
-      height: "50px",
-      width: "50px",
-      margin: "10px",
-      borderRadius: "100%",
-      boxShadow: "0 0 .5em rgba(0, 0, 0, .5)",
-      transition: "width .5s, height .5s"
-    },
-    companyNameStyle: {
-      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-      textAlign: "center",
-      lineHeight: "52px",
-      fontSize: "28px",
-      width: "260px",
-      fontWeight: 600,
-      color: "rgb(26, 23, 23)",
-      marginLeft: "10px",
-      display: "block",
-      transition : "fontsize .5s,lineHeight .5s",
-    },
-    floatingNavVisible : true
-  }
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll, true);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-    
-  nav = React.createRef();
-  
-  handleScroll = () => {
-    lastScrollY = window.scrollY;
-    this.setState({
-      logoStyle: {
-        textAlign: "center",
-        height: lastScrollY == 0 ? 50+"px" : 30+"px",
-        width: lastScrollY == 0 ? 50+"px" : 30+"px",
-        margin: lastScrollY == 0 ? 10+"px" : 2+"px",
-        borderRadius: "100%",
-        boxShadow: "0 0 .5em rgba(0, 0, 0, .5)",
-        transition: "width .5s, height .5s"
-      },
-      companyNameStyle: {
-        fontSize: lastScrollY == 0 ? 28+"px" : 18+"px",
-        lineHeight: lastScrollY == 0 ? 52 + "px" : 32 + "px",
-        fontFamily: "'Titillium Web', sans-serif",
-        textAlign: "center",
-        width : "260px",
-        fontWeight: 700,
-        color: "rgb(26, 23, 23)",
-        marginLeft: "10px",
-        display: "block",
-        transition : "fontsize .5s,lineHeight .5s"
-      }
-    })
-  };
-  menuOnClick = () => {
-    this.setState({
-      floatingNavVisible: !this.state.floatingNavVisible
-    });
-  }
-  mIn = (event) => {
-    event.target.style.color = 'blue';
-    event.target.style.textDecoration = 'underline'
-  }
-  mOut = (event) => {
-    event.target.style.color = 'white';
-    event.target.style.textDecoration = 'initial'
-  }
-  cIN = (event) => {
-    event.target.style.width = 5;
-  }
-  cOut = (event) => {
-    event.target.style.width = 50;
-  }
   render() {
     return (
       <div>
-        <nav className="my_navbar">
-          <div className="">
-            <div className="main_logo">
-              <img
-                src="images/main_logo_circle.png"
-                alt="main_logo"
-                style = {this.state.logoStyle}
-              />
-            </div>
-            <div>
-              <ul>
-              <li>
-                <FontAwesomeIcon
-                  icon={faFacebook}
-                  className="fa-2x icon_shade"
-                  color="#0000ff"
-                />
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  icon={faTwitter}
-                  className="fa-2x icon_shade"
-                  color="#00ACEE"
-                />
-              </li>
-              <li>
-                <FontAwesomeIcon
-                  icon={faLinkedin}
-                  className="fa-2x icon_shade"
-                  color="#0E76A8"
-                />
-              </li>
-              <li onClick={ this.menuOnClick}>
-                <FontAwesomeIcon
-                  icon={faBars}
-                  className="fa-2x icon_shade"
-                  color="#0E76A8"
-                />
-              </li>
-            </ul>
-            </div>
-            <div>
-              <span style={this.state.companyNameStyle}> Kamal Corporations </span>
-            </div>
-          </div>
-        </nav>
-        <div style={{
-          top: 122,
-          right: "80px",
-          position: "fixed",
-          width: "300px",
-          background: "#000000E0",
-          zIndex: 10000,
-          transition : "visibility 0.5s, opacity 0.5s linear",
-          visibility: this.state.floatingNavVisible ? "hidden" : "visible",
-          opacity : this.state.floatingNavVisible ? 0 : 100
-        }} >
-          <ul style={styles.floatingNavUl}>
-            <li style={styles.floatingNavUlLi}
-              onMouseEnter={this.mIn}
-              onMouseLeave={this.mOut}
-            >
-              Home
-            </li>
-            <li style={styles.floatingNavUlLi}
-              onMouseOver={this.mIn}
-              onMouseLeave={this.mOut}
-            >
-              History
-            </li>
-            <li style={styles.floatingNavUlLi}
-            onMouseOver={this.mIn}
-            onMouseLeave={this.mOut}
-          >
-              Products
-            </li>
-            <li style = {styles.floatingNavUlLi}
-              onMouseOver={this.mIn}
-              onMouseLeave={this.mOut}
-            >
-              News & Gallery
-            </li>
-            <li style={styles.floatingNavUlLi}
-              onMouseOver={this.mIn}
-              onMouseLeave={this.mOut}
-            >
-              Partnership
-            </li>
-            <li style={styles.floatingNavUlLi}
-              onMouseOver={this.mIn}
-              onMouseLeave={this.mOut}
-            >
-              Contact
-            </li>
-          </ul>
-        </div>
+        <Header/>
         <div id="main_section" className="section">
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="3000" >
-              <img src="images/products/laptop1.jpg" class="d-block w-100" alt="acbd" />
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            {/* <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol> */}
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="3000" >
+                <img src="images/products/laptop1.jpg" class="d-block w-100" alt="acbd" />
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/products/pen.jpg" class="d-block w-100" alt="abcd"/>
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/products/rice0.jpg" class="d-block w-100" alt="abcd"/>
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/products/vehicle.jpg" class="d-block w-100" alt="a"/>
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/products/stationary.jpg" class="d-block w-100" alt="abcd"/>
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/products/cookies.jpg" class="d-block w-100" alt="a"/>
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/products/4.jpg" class="d-block w-100" alt="a"/>
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/products/rice2.png" class="d-block w-100" alt="a"/>
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="images/products/Dal3.jpg" class="d-block w-100" alt="a"/>
+              </div>
+              
             </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src="images/products/pen.jpg" class="d-block w-100" alt="abcd"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src="images/products/rice0.jpg" class="d-block w-100" alt="abcd"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src="images/products/vehicle.jpg" class="d-block w-100" alt="a"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src="images/products/stationary.jpg" class="d-block w-100" alt="abcd"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src="images/products/cookies.jpg" class="d-block w-100" alt="a"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src="images/products/4.jpg" class="d-block w-100" alt="a"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src="images/products/rice2.png" class="d-block w-100" alt="a"/>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src="images/products/Dal3.jpg" class="d-block w-100" alt="a"/>
-            </div>
-            
+            {/* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button> */}
           </div>
-          {/* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button> */}
-        </div>
         </div>
         <section id="companies" className="section">
           <div className="container-fluid">
@@ -261,6 +92,9 @@ class Home extends React.Component {
               </div>
               <div className="single">
                   <img src="images/company_logo/joy_bangla_corp.jpg" alt="" className=""/>
+              </div>
+              <div className="forever-single">
+                  <img src="images/company_logo/ircb.jpg" alt="" className=""/>
               </div>
               {/* <div className="single">
                   <img src="images/company_logo/joy_bangla_corp.jpg" alt="" className=""/>
@@ -300,70 +134,7 @@ class Home extends React.Component {
           </div>
         </section> */}
         {/* Partner Section End */}
-        <section id="footer">
-        <div className="container"></div>
-          <footer>
-            <section className="ft-main">
-              <div className="ft-main-item">
-                <h2 className="ft-title">Registered office</h2>
-                <ul>
-                  <li>
-                    Sabera Bhavan,D C Road,
-                  </li>
-                  <li>
-                    West Bakoliya,
-                    Chawkbazar,
-                  </li>
-                  <li>
-                    Chattogram,Bangladesh.
-                  </li>
-                  {/* <li><a href="#">Services</a></li>
-                  <li><a href="#">Portfolio</a></li>
-                  <li><a href="#">Pricing</a></li>
-                  <li><a href="#">Customers</a></li>
-                  <li><a href="#">Careers</a></li> */}
-                </ul>
-              </div>
-              {/* <div className="ft-main-item">
-                <h2 className="ft-title">Liaison Office</h2>
-                <ul>
-                  <li>House 5/2,</li>
-                  <li>Road 4,Khulshi R/A,</li>
-                  <li>Zakir Hussain Road,</li>
-                  <li>Chattogram,Bangladesh.</li>
-
-                </ul>
-              </div> */}
-              <div className="ft-main-item">
-                <h2 className="ft-title">Administration Office</h2>
-                <ul>
-                  <li>125,Sugandha Housing Society,</li>
-                  <li>Road -1,Block - D</li>
-                  <li>Chittagong, Bangladesh</li>
-                </ul>
-              </div>
-            </section>
-
-            <section className="ft-social">
-              <ul className="ft-social-list">
-                <li><a href="#"><i className="fab fa-facebook"></i></a></li>
-                <li><a href="#"><i className="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i className="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i className="fab fa-github"></i></a></li>
-                <li><a href="#"><i className="fab fa-linkedin"></i></a></li>
-                <li><a href="#"><i className="fab fa-youtube"></i></a></li>
-              </ul>
-            </section>
-
-            <section className="ft-legal">
-              <ul className="ft-legal-list">
-                <li><a href="#">Terms &amp; Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li>&copy; 2021 Copyright Kamal Corporations.</li>
-              </ul>
-            </section>
-          </footer>
-        </section>
+        <Footer/>
       </div>
     );
   }
