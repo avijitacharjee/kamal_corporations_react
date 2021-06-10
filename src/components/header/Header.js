@@ -6,10 +6,9 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import "./header.css"
+import "./header.css";
 import { Link } from "react-router-dom";
 let lastScrollY = 0;
-let ticking = false;
 class Header extends React.Component {
   state = {
     logoStyle: {
@@ -22,16 +21,17 @@ class Header extends React.Component {
       transition: "width .5s, height .5s",
     },
     companyNameStyle: {
-      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      fontFamily: "'Titillium Web', sans-serif",
       textAlign: "center",
       lineHeight: "52px",
       fontSize: "28px",
-      width: "260px",
+      width: "288px",
       fontWeight: 600,
       color: "rgb(26, 23, 23)",
       marginLeft: "10px",
       display: "block",
-      transition: "fontsize .5s,lineHeight .5s",
+        transition: "fontsize .5s,lineHeight .5s",
+      textTransform : "text"
     },
     floatingNavVisible: true,
   };
@@ -58,7 +58,7 @@ class Header extends React.Component {
         transition: "width .5s, height .5s",
       },
       companyNameStyle: {
-        fontSize: lastScrollY == 0 ? 28 + "px" : 18 + "px",
+        fontSize: lastScrollY == 0 ? 24 + "px" : 18 + "px",
         lineHeight: lastScrollY == 0 ? 52 + "px" : 32 + "px",
         fontFamily: "'Titillium Web', sans-serif",
         textAlign: "center",
@@ -68,6 +68,7 @@ class Header extends React.Component {
         marginLeft: "10px",
         display: "block",
         transition: "fontsize .5s,lineHeight .5s",
+        textTransform : "uppercase"
       },
     });
   };
@@ -113,19 +114,16 @@ class Header extends React.Component {
                       <FontAwesomeIcon
                         icon={faBars}
                         className="fa-2x icon_shade rotate menu"
-                        // style= {{
-                        //   animation: "rotation 2s infinite linear"
-                        // }}
                         color="#0E76A8"
                       />
                     </button>
                     <div class="dropdown-content">
-                      <a href="#">Home</a>
-                      <Link to="/products">History</Link>
-                      <Link href="/products">Products</Link>
-                      <a href="#">News & Gallery</a>
-                      <a href="#">Partnership</a>
-                      <a href="#">Contact</a>
+                      <Link to="/">Home</Link>
+                      <Link to="/history">History</Link>
+                      <Link to="/products">Products</Link>
+                      <a href="/news-gallery">News & Gallery</a>
+                      <a href="/partnership">Partnership</a>
+                      <a href="/contact">Contact</a>
                     </div>
                   </div>
                   {/* <FontAwesomeIcon

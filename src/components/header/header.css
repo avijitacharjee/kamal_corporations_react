@@ -17,7 +17,7 @@ Navbar Start
     margin-top: 0px;
   }
   .my_navbar div .main_logo {
-    width: 260px;
+    width: 288px;
     text-align: center;
   }
   .my_navbar div ul {
@@ -55,10 +55,10 @@ Navbar Start
       margin-right: 1%;
     }
   }
-  .rotate {
-    /* animation: rotation 2s infinite linear; */
-  }
-  /* @keyframes rotation {
+.rotate {
+    animation: rotation 2s infinite linear; 
+}
+  @keyframes rotation {
     33% {
       transform: rotate(0deg);
     }
@@ -68,7 +68,7 @@ Navbar Start
     100% {
         transform: rotate(180deg);
     }
-  } */
+  }
   .navigation {
     top: 122px;
     right: 80px;
