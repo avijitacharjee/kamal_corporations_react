@@ -36,7 +36,7 @@ Footer start
 /* Generic styling */
 * {
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  font-family: 'Playfair Display', serif;
   margin: 0;
   padding: 0;
 }
@@ -78,18 +78,19 @@ body {
 }
 /* Footer main */
 .ft-main {
-  padding: 0rem 1.875rem;
+  padding: 0rem 7%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 @media only screen and (min-width: 29.8125rem /* 477px */) {
   .ft-main {
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 }
 @media only screen and (min-width: 77.5rem /* 1240px */) {
   .ft-main {
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 }
 .ft-main-item {

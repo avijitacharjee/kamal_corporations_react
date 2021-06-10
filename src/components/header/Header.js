@@ -77,6 +77,7 @@ class Header extends React.Component {
       <div>
         <nav className="my_navbar">
           <div className="">
+            <Link to="/">
             <div className="main_logo">
               <img
                 src="images/main_logo_circle.png"
@@ -84,6 +85,7 @@ class Header extends React.Component {
                 style={this.state.logoStyle}
               />
             </div>
+            </Link>
             <div>
               <ul>
                 <li>
@@ -120,10 +122,10 @@ class Header extends React.Component {
                     <div class="dropdown-content">
                       <Link to="/">Home</Link>
                       <Link to="/history">History</Link>
-                      <Link to="/products">Products</Link>
-                      <a href="/news-gallery">News & Gallery</a>
-                      <a href="/partnership">Partnership</a>
-                      <a href="/contact">Contact</a>
+                      <a href="#">Products</a>
+                      <a href="#">News & Gallery</a>
+                      <Link to="/partnership">Partnership</Link>
+                      <a href="#">Contact</a>
                     </div>
                   </div>
                   {/* <FontAwesomeIcon
@@ -140,10 +142,12 @@ class Header extends React.Component {
               </ul>
             </div>
             <div>
-              <span style={this.state.companyNameStyle}>
-                {" "}
-                Kamal Corporations{" "}
-              </span>
+              <Link to="/">
+                <span style={this.state.companyNameStyle}>
+                  {" "}
+                  Kamal Corporations{" "}
+                </span>
+              </Link>
             </div>
           </div>
         </nav>
