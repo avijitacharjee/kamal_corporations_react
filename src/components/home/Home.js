@@ -48,7 +48,7 @@ class Home extends React.Component {
                 <img src="images/products/rice2.png" class="d-block w-100" alt="a"/>
               </div>
               <div class="carousel-item" data-bs-interval="3000">
-                <img src="images/products/Dal3.jpg" class="d-block w-100" alt="a"/>
+                <img src="images/products/Dal3.JPG" class="d-block w-100" alt="a"/>
               </div>
               
             </div>

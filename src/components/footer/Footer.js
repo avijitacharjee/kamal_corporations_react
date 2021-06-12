@@ -12,16 +12,16 @@ export class Footer extends Component {
               <div className="ft-main-item">
                 <h2 className="ft-title">Registered office</h2>
                 <ul>
-                  <li>Sabera Bhavan,D C Road,</li>
+                  <li>Sabera Bhavan, D C Road,</li>
                   <li>West Bakoliya, Chawkbazar,</li>
-                  <li>Chattogram,Bangladesh.</li>
+                  <li>Chattogram, Bangladesh.</li>
                 </ul>
               </div>
               <div className="ft-main-item">
                 <h2 className="ft-title">Administration Office</h2>
                 <ul>
                   <li>125,Sugandha Housing Society,</li>
-                  <li>Road -1,Block - D</li>
+                  <li>Road -1, Block - D</li>
                   <li>Chittagong, Bangladesh</li>
                 </ul>
               </div>
@@ -46,11 +46,6 @@ export class Footer extends Component {
                 </li>
                 <li>
                   <a href="#">
-                    <i className="fab fa-github"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
                     <i className="fab fa-linkedin"></i>
                   </a>
                 </li>
@@ -65,10 +60,10 @@ export class Footer extends Component {
             <section className="ft-legal">
               <ul className="ft-legal-list">
                 <li>
-                  <a href="#">Terms &amp; Conditions</a>
-                </li>
-                <li>
-                  <a href="#">Privacy Policy</a>
+                  Site developed by : <a href="https://avijitacharjee.github.io" target="_blank" style={{
+                    color: "#FFFFFF",
+                    textDecoration : "underline"
+                  }}>Avijit Acharjee</a>
                 </li>
                 <li>&copy; 2021 Copyright Kamal Corporations.</li>
               </ul>

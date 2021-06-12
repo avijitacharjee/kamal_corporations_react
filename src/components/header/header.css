@@ -32,6 +32,11 @@ Navbar Start
   .my_navbar div ul li {
     margin-left: 20px;
   }
+  .my_navbar div ul li svg:hover {
+    transform: scale(1.25);
+    /* box-shadow: 10px 10px 15px #82636390; */
+    transition: all .2s linear;
+  }
   .my_navbar ul li .icon_shade {
     text-shadow: 1px 1px 1px #000;
   }
@@ -59,7 +64,7 @@ Navbar Start
       margin-right: 1%;
     }
     #my_nav .social {
-      display: contents;
+      display: block;
     }
   }
 
@@ -130,6 +135,7 @@ Navbar Start
   .dropdown:hover .dropdown-content {
     display: block;
   }
+  /* Animations */
   
   /*=================
   Navbar End
