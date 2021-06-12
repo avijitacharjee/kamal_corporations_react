@@ -13,9 +13,9 @@ class Header extends React.Component {
   state = {
     logoStyle: {
       textAlign: "center",
-      height: "50px",
-      width: "50px",
-      margin: "10px",
+      height: "40px",
+      width: "40px",
+      margin: "5px",
       borderRadius: "100%",
       boxShadow: "0 0 .5em rgba(0, 0, 0, .5)",
       transition: "width .5s, height .5s",
@@ -24,14 +24,14 @@ class Header extends React.Component {
       fontFamily: "'Titillium Web', sans-serif",
       textAlign: "center",
       lineHeight: "52px",
-      fontSize: "28px",
+      fontSize: "22px",
       width: "288px",
       fontWeight: 600,
       color: "rgb(26, 23, 23)",
       marginLeft: "10px",
       display: "block",
-        transition: "fontsize .5s,lineHeight .5s",
-      textTransform : "text"
+      transition: "fontsize .5s,lineHeight .5s",
+      textTransform: "uppercase",
     },
     floatingNavVisible: true,
   };
@@ -47,62 +47,92 @@ class Header extends React.Component {
 
   handleScroll = () => {
     lastScrollY = window.scrollY;
-    this.setState({
-      logoStyle: {
-        textAlign: "center",
-        height: lastScrollY == 0 ? 50 + "px" : 30 + "px",
-        width: lastScrollY == 0 ? 50 + "px" : 30 + "px",
-        margin: lastScrollY == 0 ? 10 + "px" : 2 + "px",
-        borderRadius: "100%",
-        boxShadow: "0 0 .5em rgba(0, 0, 0, .5)",
-        transition: "width .5s, height .5s",
-      },
-      companyNameStyle: {
-        fontSize: lastScrollY == 0 ? 24 + "px" : 18 + "px",
-        lineHeight: lastScrollY == 0 ? 52 + "px" : 32 + "px",
-        fontFamily: "'Titillium Web', sans-serif",
-        textAlign: "center",
-        width: "260px",
-        fontWeight: 700,
-        color: "rgb(26, 23, 23)",
-        marginLeft: "10px",
-        display: "block",
-        transition: "fontsize .5s,lineHeight .5s",
-        textTransform : "uppercase"
-      },
-    });
+    if (window.innerWidth < 490) {
+      this.setState({
+        logoStyle : {
+          textAlign: "center",
+          height: lastScrollY == 0 ? 50 + "px" : 30 + "px",
+          width: lastScrollY == 0 ? 50 + "px" : 30 + "px",
+          margin: lastScrollY == 0 ? 10 + "px" : 2 + "px",
+          borderRadius: "100%",
+          boxShadow: "0 0 .5em rgba(0, 0, 0, .5)",
+          transition: "width .5s, height .5s",
+        },
+        companyNameStyle: {
+          fontSize: lastScrollY == 0 ? 22 + "px" : 20 + "px",
+          lineHeight: lastScrollY == 0 ? 52 + "px" : 32 + "px",
+          fontFamily: "'Titillium Web', sans-serif",
+          textAlign: "center",
+          width: "288px",
+          fontWeight: 700,
+          color: "rgb(26, 23, 23)",
+          marginLeft: "10px",
+          display: "block",
+          transition: "fontsize .5s,lineHeight .5s",
+          textTransform: "uppercase",
+        }
+      }
+      );
+    }
+    else {
+      this.setState({
+        logoStyle: {
+          textAlign: "center",
+          height: lastScrollY == 0 ? 50 + "px" : 30 + "px",
+          width: lastScrollY == 0 ? 50 + "px" : 30 + "px",
+          margin: lastScrollY == 0 ? 10 + "px" : 2 + "px",
+          borderRadius: "100%",
+          boxShadow: "0 0 .5em rgba(0, 0, 0, .5)",
+          transition: "width .5s, height .5s",
+        },
+        companyNameStyle: {
+          fontSize: lastScrollY == 0 ? 24 + "px" : 18 + "px",
+          lineHeight: lastScrollY == 0 ? 52 + "px" : 32 + "px",
+          fontFamily: "'Titillium Web', sans-serif",
+          textAlign: "center",
+          width: "260px",
+          fontWeight: 700,
+          color: "rgb(26, 23, 23)",
+          marginLeft: "10px",
+          display: "block",
+          transition: "fontsize .5s,lineHeight .5s",
+          textTransform: "uppercase",
+        },
+      });
+    }
+    
   };
   render() {
     return (
       <div>
-        <nav className="my_navbar">
+        <nav className="my_navbar" id= "my_nav">
           <div className="">
             <Link to="/">
-            <div className="main_logo">
-              <img
-                src="images/main_logo_circle.png"
-                alt="main_logo"
-                style={this.state.logoStyle}
-              />
-            </div>
+              <div className="main_logo">
+                <img
+                  src="images/main_logo_circle.png"
+                  alt="main_logo"
+                  style={this.state.logoStyle}
+                />
+              </div>
             </Link>
             <div>
               <ul>
-                <li>
+                <li className="social">
                   <FontAwesomeIcon
                     icon={faFacebook}
                     className="fa-2x icon_shade"
                     color="#0000ff"
                   />
                 </li>
-                <li>
+                <li className="social">
                   <FontAwesomeIcon
                     icon={faTwitter}
                     className="fa-2x icon_shade"
                     color="#00ACEE"
                   />
                 </li>
-                <li>
+                <li className="social">
                   <FontAwesomeIcon
                     icon={faLinkedin}
                     className="fa-2x icon_shade"
@@ -112,7 +142,6 @@ class Header extends React.Component {
                 <li onClick={this.menuOnClick}>
                   <div class="dropdown">
                     <button class="dropbtn">
-                      {/* <i class="fa fa-bars"></i> */}
                       <FontAwesomeIcon
                         icon={faBars}
                         className="fa-2x icon_shade rotate menu"
@@ -121,6 +150,7 @@ class Header extends React.Component {
                     </button>
                     <div class="dropdown-content">
                       <Link to="/">Home</Link>
+                      <Link to="/company_profile">Company Profile</Link>
                       <Link to="/history">History</Link>
                       <a href="#">Products</a>
                       <a href="#">News & Gallery</a>
@@ -128,22 +158,12 @@ class Header extends React.Component {
                       <a href="#">Contact</a>
                     </div>
                   </div>
-                  {/* <FontAwesomeIcon
-                            icon={faBars}
-                            className="fa-2x icon_shade rotate menu"
-                            // style= {{
-                            //   animation: "rotation 2s infinite linear"
-                            // }}
-                            color="#0E76A8"
-                            // onMouseEnter = {this.menuIn}
-                            // onMouseLeave = {this.menuOut}
-                            /> */}
                 </li>
               </ul>
             </div>
             <div>
               <Link to="/">
-                <span style={this.state.companyNameStyle}>
+                <span style={this.state.companyNameStyle} id = "company_name">
                   {" "}
                   Kamal Corporations{" "}
                 </span>

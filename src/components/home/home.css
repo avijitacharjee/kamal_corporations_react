@@ -24,10 +24,10 @@ Main section Start
   z-index: -1;
 }
 #main_section {
-  position: absolute;
+  position: relative;
+  margin-top: 122px;
   margin-left: 3%;
   margin-right:3%;
-  margin-top: 122px;
   width: 94%;
   height: 100%;
   /* background: url('https://images.unsplash.com/photo-1519735777090-ec97162dc266?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=815&q=80'); */
@@ -35,6 +35,9 @@ Main section Start
   opacity: 1.0;
   content: "";
   z-index: -1;
+  float: left;
+  display: block;
+  clear: both;
 }
 
 
@@ -46,11 +49,12 @@ Main section End
 Companies start
 ===================*/
 #companies {
-  padding-top: 800px;
+  position: relative;
   margin: auto;
   display: flex;
   align-items: flex-start;
   box-sizing: border-box;
+  clear: both;
 }
 #companies h1 {
   text-align: center;
@@ -111,7 +115,7 @@ Companies start
 }
 @media screen and (max-width : 900px) {
   #companies .c_body .single {
-    width: 43%;
+    width: 94%;
     margin: 3%;
   }
   .empty_single {
@@ -121,6 +125,24 @@ Companies start
     padding: 0px;
     box-shadow: none;
   }
+  .forever-single {
+    float: left;
+    width: 94%;
+    background-color: #826363;
+    margin: 1.1% 3%;
+    padding: 1px;
+    box-shadow: 0 0 .7em rgba(0, 0, 0, .5);
+  }
+  #companies h1 {
+    font-size: 24px;
+  }
+  #companies .line {
+    width: 150px;
+    height: 1px;
+    background-color: #826363;
+    margin: auto;
+    border-radius: 20%;
+}
 }
 
 /*=================

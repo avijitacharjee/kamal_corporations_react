@@ -15,7 +15,7 @@ class Home extends React.Component {
     return (
       <div>
         <Header/>
-        <div id="main_section" className="section">
+        <section id="main_section" className="section">
           <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             {/* <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -61,7 +61,7 @@ class Home extends React.Component {
               <span class="visually-hidden">Next</span>
             </button> */}
           </div>
-        </div>
+        </section>
         <section id="companies" className="section">
           <div className="container-fluid">
             <div className="row">
