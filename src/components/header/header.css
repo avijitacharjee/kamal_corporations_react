@@ -92,7 +92,7 @@ Navbar Start
     visibility: hidden;
   }
   .menu:hover {
-    background-color: #00d188;
+    background-color: #40667d;
   }
   .menu:hover .navig{
     visibility: visible;
@@ -129,7 +129,7 @@ Navbar Start
   }
   
   .dropdown-content a:hover {
-    background-color: #826363;
+    background-color: #40667d;
   }
   
   .dropdown:hover .dropdown-content {

@@ -1,7 +1,7 @@
 /* Three columns side by side */
 .column {
   float: left;
-  width: 25%;
+  width: 33.33%;
   margin-bottom: 16px;
   padding: 0 8px;
   background-color: white;
@@ -19,13 +19,18 @@
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   height: 100%;
-  padding: 1px;
-  box-shadow: 5px 5px 7.5px #82636390;
+  box-shadow: 5px 5px 7.5px 0px #82636390;
   transition: all .1s linear;
+}
+.text-only {
+  background-color: white;
+  color: black;
+  padding: 50px 0;
 }
 .card:hover {
     box-shadow: 10px 10px 15px #82636390;
 }
+
 
 /* Some left and right padding inside the container */
 .container {
@@ -68,10 +73,12 @@
   position: relative;
   width: 60%;
   margin: 0 auto;
+  font-family: "Merriweather", serif;
 }
 #company_profile h2 {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 800;
+  font-family: "Merriweather", serif;
 }
 p {
   font-size: 14px;

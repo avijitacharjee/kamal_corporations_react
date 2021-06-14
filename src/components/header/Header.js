@@ -155,7 +155,7 @@ class Header extends React.Component {
                       <a href="#">Products</a>
                       <a href="#">News & Gallery</a>
                       <Link to="/partnership">Partnership</Link>
-                      <a href="#">Contact</a>
+                      <a href="#footer">Contact</a>
                     </div>
                   </div>
                 </li>

@@ -32,7 +32,7 @@ export class History extends Component {
                   </div>
                   <div class="description text-center">
                     <p>
-                      <b>Late Alhaj Touhidul Alam Chowdhury</b>(1915-1978) established the
+                      <b>Late Alhaj Touhidul Alam Chowdhury </b>(1915-1978) established the
                       business enterprise in the year 1945 in the name of <b>M/S
                       Alam Trading Corporation </b> at Abhay Mitra Ghat, Fireengi
                       Bazaar, the then most important commercial trading zone of
@@ -42,9 +42,9 @@ export class History extends Component {
                       <br />
                       <br/>
                       Late Touhidul Alam Chowdhury was a patent
-                      businessman,politician and social reformer. He born in the
+                      businessman, politician and social reformer. He born in the
                       year 1915 at Haidchakiya Village, Paindong union of
-                      Fatikchari Upazilla.His lineage belongs to a highly
+                      Fatikchari Upazilla. His lineage belongs to a highly
                       reputed and elite Muslim family of North district of
                       Chattogram. His father <b>Late Aminur Rahman Chowdhury</b> and
                       Mother <b>Gul bahar Begum</b>, his grandfather was a renowned
@@ -58,7 +58,7 @@ export class History extends Component {
                       and organizer of East Pakistan Awami League at Chattogram
                       (Later it turned to Bangladesh Awami League) under the
                       leadership of <b>Bangabndhu Shekh Mujibur Rahman</b> along with
-                      his friends veteran politician <b>Jaan e Alam Duvash, Dr.M A
+                      his friends veteran politician <b>Jaan e Alam Duvash, Dr. M A
                       Mannan, Maksud Ahmed Chowdhury Sardar</b> (Still alive) and
                       many more. He was <b>Secretary in charge and treasurer</b> of
                       Local Awamileague, he organized <b>Chattogram North District
@@ -91,7 +91,7 @@ export class History extends Component {
                       
                       Alhaj Touhidul Alam Chy died in the year 1978, after
                       his demise elder son Late Mostafa Kamal Pasha Chowdhury
-                      led his businesses till the end of 90's.Unfortunately Late
+                      led his businesses till the end of 90's. Unfortunately Late
                       Kamal Chy died in very early age in the year 2003 when he
                       was only 56.
                       
@@ -114,7 +114,7 @@ export class History extends Component {
                       Accounting and Tax professional having her graduation from
                       Chattogram University. She is the Co sponsor and
                       co-entrepreneur of Kamal Corporations and looks over the
-                      Tax,VAT,finance and Accounting work outs of the
+                      Tax, VAT, finance and Accounting work outs of the
                       enterprises.
                     </p>
                   </div>

@@ -10,11 +10,20 @@ export class Footer extends Component {
           <footer>
             <section className="ft-main">
               <div className="ft-main-item">
-                <h2 className="ft-title">Registered office</h2>
+                <h2 className="ft-title">Registered Office</h2>
                 <ul>
                   <li>Sabera Bhavan, D C Road,</li>
                   <li>West Bakoliya, Chawkbazar,</li>
                   <li>Chattogram, Bangladesh.</li>
+                  <li>Email: contact@kamalcorporations.com</li>
+                </ul>
+              </div>
+              <div className="ft-main-item">
+                <div className="ft-title">Overseas Liaison Office</div>
+                <ul>
+                  <li>136, Tent Line,</li>
+                  <li>Mohan Nagar, Nagpur- 440001,</li>
+                  <li>Maharashtra, India.</li>
                 </ul>
               </div>
               <div className="ft-main-item">
@@ -23,6 +32,7 @@ export class Footer extends Component {
                   <li>125,Sugandha Housing Society,</li>
                   <li>Road -1, Block - D</li>
                   <li>Chittagong, Bangladesh</li>
+                  <li>Email: contact@kamalcorporations.com</li>
                 </ul>
               </div>
             </section>
@@ -76,3 +86,7 @@ export class Footer extends Component {
 }
 
 export default Footer;
+//cpanel blocked ip 116.58.202.147 (gp)
+//robi ip 58.145.186.227
+
+// ssh key pass p.lANoaMt8MX
