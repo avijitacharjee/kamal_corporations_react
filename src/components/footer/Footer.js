@@ -86,7 +86,3 @@ export class Footer extends Component {
 }
 
 export default Footer;
-//cpanel blocked ip 116.58.202.147 (gp)
-//robi ip 58.145.186.227
-
-// ssh key pass p.lANoaMt8MX
