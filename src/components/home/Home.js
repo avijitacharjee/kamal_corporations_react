@@ -10,8 +10,10 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Header from "../header/Header";
 import Footer from "../footer/Footer"
 import { Carousel } from "react-bootstrap";
+import firebase from "firebase";
 class Home extends React.Component {
   render() {
+    const firebaseApp = firebase.apps[0];
     return (
       <div>
         <Header />
@@ -137,7 +139,14 @@ class Home extends React.Component {
           </div>
         </section> */}
         {/* Partner Section End */}
-        <Footer/>
+        <Footer />
+        {/* <div>
+          <h1>React & Firebase</h1>
+          <h2>By @farazamiruddin</h2>
+          <code>
+            <pre>{JSON.stringify(firebaseApp.options, null, 2)}</pre>
+          </code>
+        </div> */}
       </div>
     );
   }
