@@ -28,9 +28,11 @@ Navbar Start
     list-style: none;
     padding-right: 20px;
     margin-right: 40px;
+    z-index: 100;
   }
   .my_navbar div ul li {
     margin-left: 20px;
+    z-index: 100;
   }
   .my_navbar div ul li svg:hover {
     transform: scale(1.25);
@@ -51,6 +53,7 @@ Navbar Start
     margin-left: 10px;
     display: block;
     font-family: 'Titillium Web', sans-serif;
+    z-index: 0;
   }
   #my_nav .social {
     display: none;
@@ -88,7 +91,7 @@ Navbar Start
     position: "fixed";
     width: 300px;
     background: #000000E0;
-    z-index: 10000;
+    z-index: 100;
     visibility: hidden;
   }
   .menu:hover {
@@ -107,6 +110,7 @@ Navbar Start
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    z-index: 100;
   }
   
   .dropdown-content {

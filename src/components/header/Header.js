@@ -45,7 +45,7 @@ class Header extends React.Component {
 
   nav = React.createRef();
 
-  handleScroll = () => {
+  handleScroll = ()=> {
     lastScrollY = window.scrollY;
     if (window.innerWidth < 490) {
       this.setState({
@@ -70,6 +70,7 @@ class Header extends React.Component {
           display: "block",
           transition: "fontsize .5s,lineHeight .5s",
           textTransform: "uppercase",
+          zIndex: 0,
         }
       }
       );
@@ -97,6 +98,7 @@ class Header extends React.Component {
           display: "block",
           transition: "fontsize .5s,lineHeight .5s",
           textTransform: "uppercase",
+          zIndex :0,
         },
       });
     }
@@ -140,15 +142,15 @@ class Header extends React.Component {
                   />
                 </li>
                 <li onClick={this.menuOnClick}>
-                  <div class="dropdown">
-                    <button class="dropbtn">
+                  <div className="dropdown">
+                    <button className="dropbtn">
                       <FontAwesomeIcon
                         icon={faBars}
                         className="fa-2x icon_shade rotate menu"
                         color="#0E76A8"
                       />
                     </button>
-                    <div class="dropdown-content">
+                    <div className="dropdown-content">
                       <Link to="/">Home</Link>
                       <Link to="/company_profile">Company Profile</Link>
                       <Link to="/history">History</Link>
@@ -163,7 +165,7 @@ class Header extends React.Component {
             </div>
             <div>
               <Link to="/">
-                <span style={this.state.companyNameStyle} id = "company_name">
+                <span style={this.state.companyNameStyle} id = "company_name" className="animate__animated animate__rotateIn">
                   {" "}
                   Kamal Corporations{" "}
                 </span>

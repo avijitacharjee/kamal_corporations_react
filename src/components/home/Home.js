@@ -8,17 +8,39 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Header from "../header/Header";
-import Footer from "../footer/Footer"
+import Footer from "../footer/Footer";
 import { Carousel } from "react-bootstrap";
-import firebase from "firebase";
+import ScrollTrigger from "react-scroll-trigger";
+
 class Home extends React.Component {
+  state = {
+    visible: false,
+  };
+  onEnterViewport = () => {
+    this.setState({
+      visible: true,
+    });
+    setTimeout(() => {
+      this.setState({
+      visible: false
+    });
+    }, 1000);
+    
+  };
+
+  onExitViewport = () => {
+    this.setState({
+      visible: false,
+    });
+  };
   render() {
-    const firebaseApp = firebase.apps[0];
+    const { visible } = this.state;
+    // const firebaseApp = firebase.apps[0];
     return (
       <div>
         <Header />
         <section id="main_section" className="section">
-          <Carousel>
+          <Carousel className="animate__animated animate__bounceInDown">
             <Carousel.Item interval={4000}>
               <img
                 className="d-block w-100"
@@ -46,7 +68,7 @@ class Home extends React.Component {
             </Carousel.Item>
           </Carousel>
         </section>
-        
+
         {/* <section id="main_section" className="section">
           <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <ol class="carousel-indicators">
@@ -76,43 +98,87 @@ class Home extends React.Component {
           </div>
         </section> */}
         <section id="companies" className="section">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="section-title">
-                <h1>
-                  <span>Our</span> Enterprises
-                </h1>
-              </div>
-            </div>
-            <div className="line">
-            </div>
-            <div className="c_body">
-                <div className="single">
-                    <img src="images/company_logo/trading.jpg" alt="" className=""/>
+          <ScrollTrigger
+            onEnter={this.onEnterViewport}
+            onExit={this.onExitViewport}
+          >
+            <div className="container-fluid">
+              <div className="row">
+                <div className="section-title">
+                  <h1>
+                    <span>Our</span> Enterprises
+                  </h1>
                 </div>
-                <div className="single">
-                  <img src="images/company_logo/agriculture.jpg" alt="" className=""/>
+              </div>
+              <div className="line"></div>
+              <div className="c_body">
+                <div
+                  className={`single ${visible?"animate__animated animate__backInLeft":""}`}>
+                  <img
+                    src="images/company_logo/trading.jpg"
+                    alt=""
+                    className=""
+                  />
                 </div>
-                <div className="single">
-                    <img src="images/company_logo/logistics.jpg" alt="" className=""/>
+                <div className={
+                    visible
+                      ? "single animate__animated animate__backInDown"
+                      : "single"
+                  }>
+                  <img
+                    src="images/company_logo/agriculture.jpg"
+                    alt=""
+                    className=""
+                  />
+                </div>
+                <div className={
+                    visible
+                      ? "single animate__animated animate__backInRight"
+                      : "single"
+                  }>
+                  <img
+                    src="images/company_logo/logistics.jpg"
+                    alt=""
+                    className=""
+                  />
+                </div>
+                <div className={
+                    visible
+                      ? "single animate__animated animate__backInLeft"
+                      : "single"
+                  }>
+                  <img
+                    src="images/company_logo/nargis_property.jpg"
+                    alt=""
+                    className=""
+                  />
+                </div>
+                <div className={
+                    visible
+                      ? "single animate__animated animate__backInUp"
+                      : "single"
+                  }>
+                  <img
+                    src="images/company_logo/infotech.png"
+                    alt=""
+                    className=""
+                  />
+                </div>
+                <div className={
+                    visible
+                      ? "single animate__animated animate__backInRight"
+                      : "single"
+                  }>
+                  <img src="images/company_logo/ircb.jpg" alt="" className="" />
+                </div>
+                {/* <div className="forever-single">
+                      <img src="images/company_logo/ircb.jpg" alt="" className=""/>
+                  </div> */}
               </div>
-              <div className="single">
-                  <img src="images/company_logo/nargis_property.jpg" alt="" className=""/>
-              </div>
-              <div className="single">
-                <img src="images/company_logo/infotech.png" alt="" className=""/>
-              </div>
-              <div className="single">
-                  <img src="images/company_logo/ircb.jpg" alt="" className=""/>
-              </div>
-              {/* <div className="forever-single">
-                  <img src="images/company_logo/ircb.jpg" alt="" className=""/>
-              </div> */}
-        
             </div>
-          </div>
+          </ScrollTrigger>
         </section>
-        
+
         {/* Partners Section */}
         {/* <section id="partners" className="section">
           <div className="container-fluid">
@@ -140,7 +206,7 @@ class Home extends React.Component {
         </section> */}
         {/* Partner Section End */}
         <Footer />
-        {/* <div>
+        {/* <div className="animate__animated animate__bounce">
           <h1>React & Firebase</h1>
           <h2>By @farazamiruddin</h2>
           <code>
@@ -153,14 +219,13 @@ class Home extends React.Component {
 }
 export default Home;
 var styles = {
-  
   floatingNavUl: {
     marginLeft: "30px",
-    marginTop : "20px",
+    marginTop: "20px",
     color: "#fff",
-    listStyleType : "circle"
+    listStyleType: "circle",
   },
-  floatingNavUlLi : {
-    color : "#fff"
-  }
-}
+  floatingNavUlLi: {
+    color: "#fff",
+  },
+};

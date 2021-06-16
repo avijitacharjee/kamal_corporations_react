@@ -16,7 +16,7 @@ export class History extends Component {
                   <div class="row">
                     <div class="col-md-6 ml-auto mr-auto">
                       <div class="profile">
-                        <div class="avatar">
+                        <div class="avatar animate__animated animate__zoomIn">
                           <img
                             src="images/history/towhidul-alam-chowdhury.jpg"
                             alt="Circle Image"
@@ -31,7 +31,7 @@ export class History extends Component {
                     </div>
                   </div>
                   <div class="description text-center">
-                    <p>
+                    <p className="animate__animated animate__lightSpeedInLeft">
                       <b>Late Alhaj Touhidul Alam Chowdhury </b>(1915-1978) established the
                       business enterprise in the year 1945 in the name of <b>M/S
                       Alam Trading Corporation </b> at Abhay Mitra Ghat, Fireengi

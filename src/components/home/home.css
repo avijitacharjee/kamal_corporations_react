@@ -105,8 +105,8 @@ Companies start
 }
 #companies .c_body .single:hover {
   transform: scale(1.05);
+  -webkit-transform: scale(1.05);
   box-shadow: 10px 10px 15px #82636390;
-
 }
 #companies img {
   width: 100%;
