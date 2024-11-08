@@ -75,7 +75,7 @@ export class Footer extends Component {
                     textDecoration : "underline"
                   }}>Avijit Acharjee</a>
                 </li>
-                <li>&copy; 2021 Copyright Kamal Corporations.</li>
+                <li>&copy; 2024 Copyright Kamal Corporations.</li>
               </ul>
             </section>
           </footer>
